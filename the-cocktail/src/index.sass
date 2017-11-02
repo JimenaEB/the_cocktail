@@ -1,0 +1,244 @@
+@font-face
+    font-family: "Lato"
+    src: url("./typography/Lato-Light.ttf")
+
+@font-face
+    font-family: "Proxima"
+    src: url("./typography/Proxima Nova Reg.woff")
+
+$header-background:  #0e75b3
+$blue-link: #30b2f1
+$grey-text: #a0a0a0
+$footer-decoration: #f1f1f1
+$footer-background: #e5e5e5
+$social-background: #e5e5e5
+$services-background: #f7f7f7
+$terms-background: #ededed
+$terms: #7f7f7f
+$twitter: #1ea0f2
+$facebook: #4367b1
+$linkedin: #0084be
+$icon-hover: #4CBAFF
+
+$font-text: Lato
+$font-title: Proxima
+
+$small: 576px
+$medium: 768px
+$large: 992px
+
+a:hover
+    text-decoration: none
+
+.section
+    padding: 2em 5% 0!important
+    font-family: $font-text
+
+.header
+    background-color: $header-background
+
+    button
+        background-color: inherit !important
+
+.main-container
+    padding: 0px
+
+.services
+    text-align: center
+    background-color: $services-background
+    font-family: $font-title
+    padding-top: 0 !important
+
+    &--section
+        padding-top: 2em
+        border-right: solid .1em $footer-background
+
+        &:last-child
+            border: none
+
+    &--icon
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 1em
+        height: 110px
+        width: 100px
+        background-image: url("./assets/Oval 12.svg")
+        background-position: center
+        background-size: cover
+
+        &--inner
+            height: 2.5em
+
+    &--text
+        color: darken($footer-background, 30%)
+
+    &--link
+        color: $blue-link
+        line-height: 3em
+
+    &--button
+        margin: 3em 0
+        color: $blue-link
+        background-color: transparent
+        border: solid .05em
+        font-weight: bold
+        padding: .8em 1em
+        cursor: pointer
+
+        &:hover
+            background-color: $blue-link
+            color: white
+
+.incoterms
+    text-align: center
+    font-family: $font-title
+    padding: 4em 13em
+
+    &--title
+        font-size: 3em
+
+    &--text
+        color: darken($footer-background, 30%)
+        font-size: 1.5em
+
+    &--terms
+        background-color: $terms-background
+        color: $terms
+        margin: 1em .5em 0
+        border-radius: 8%
+        padding: .5em 2em
+        font-weight: bolder
+        position: relative
+
+        &--pointer
+            background-color: $blue-link
+            
+            &:after
+                top: 100%
+                border: solid transparent
+                content: ""
+                position: absolute
+                border-top-color: $blue-link
+                border-width: 10px
+                margin-left: -25%
+
+        &:hover
+            background-color: $blue-link
+            color: white
+
+    &--explaination
+        margin-top: 1.5em
+        font-size: 1.3em
+
+    &--steps
+        margin-top: 3em
+
+        &--container
+            align-items: center
+            display: inline-flex
+            justify-content: center
+
+        &--img
+            height: 6em
+            margin-bottom: 1.5em
+
+        &--next
+            position: absolute
+            right: 0
+
+        &--check
+            max-height: 3em
+
+.twitter:hover
+    color: $twitter
+
+.facebook:hover
+    color: $facebook
+
+.linkedin:hover
+    color: $linkedin
+
+.footer
+    &--phone
+        color: $grey-text
+        border: solid 0.1em $grey-text
+        padding: .5em
+        margin-bottom: 1em
+
+    &--social
+        text-align: center
+
+        &--img
+            font-size: 2em !important
+            color: $social-background
+
+    &--section
+        padding-bottom: 3em
+
+        &--link
+            color: $grey-text
+            display: block
+            overflow: hidden
+            height: 25px
+
+    &--title
+        font-family: $font-title
+        color: $blue-link
+        font-size: 1em
+        padding: 1em 0
+
+    &--link
+        color: $blue-link
+        margin-left: 1em
+        font-family: $font-title
+
+    &--img
+        height: 1.5em
+
+.logo
+    padding-top: 2em
+    overflow: hidden
+
+    &--container
+        background-color: $footer-background
+
+    &--img
+        max-height: 168px
+        max-width: 168px
+
+        &:hover
+            cursor: pointer
+
+    &--decoration
+        background-color: $footer-decoration
+
+        &:before
+            content: ""
+            position: absolute
+            right: 0px
+            bottom: 0
+            width: 0
+            height: 0
+            border-left: 50px solid #f1f1f1
+            border-top: 83px solid #e5e5e5
+            border-bottom: 83px solid #e5e5e5
+
+@media (max-width: $large) and (min-width: $medium)
+    .services--section:nth-child(even)
+        border: none
+
+@media (max-width: $medium)
+    .services--section
+        border: none
+
+@media (max-width: $large)
+    .incoterms
+        padding: 4em 5%
+
+        &--steps--imgcontainer
+            min-height: 7em
+
+        &--steps--paragraph
+            min-height: 7em
